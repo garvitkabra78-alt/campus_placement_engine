@@ -1,29 +1,80 @@
 # Campus Placement Drive & Eligibility Screening Engine
 
-A Java 8 application designed for college placement cells to dynamically filter student profiles using custom predicate chains, track candidate interview rounds, analyze placement metrics, and issue employment offer documents.
+##  Project Overview
 
-## Key Features
-- **Rule-Based Screening Engine:** Functional evaluation using Java 8 Stream API and composable `Predicate` chains (CGPA cutoffs, active backlogs, department matching, required skill tags).
-- **Multi-Round Interview Tracker:** Operational advancement across recruitment stages (`Aptitude Cleared` → `Technical Cleared` → `Placed`).
-- **Placement Analytics Dashboard:** Live calculation of candidate counts, placement ratios, and average CTC offerings.
-- **Automated Offer Generator:** Instant issuance of formal employment letters for verified placed students.
-- **Dual Interface:** Terminal Command Line Interface (CLI) and Swing Graphical User Interface (GUI).
+The **Campus Placement Drive & Eligibility Screening Engine** is a Java-based application designed to simplify and automate the campus placement process.
 
-## System Requirements
-- **Java Development Kit (JDK):** Version 8 or higher.
-- **Operating System:** Cross-platform (Linux, macOS, Windows).
-- **Dependencies:** Built using standard Java standard libraries (`java.util.stream` and `javax.swing`).
+In a college placement drive, placement cells need to evaluate a large number of students based on different company eligibility criteria such as:
 
-## Setup & Execution Instructions
+- Minimum CGPA
+- Maximum allowed backlogs
+- Department eligibility
+- Required technical skills
 
-### 1. Compilation
-Open your terminal in the root project directory and compile the Java class:
-```bash
-javac CampusPlacementEngine.java
-java CampusPlacementEngine
-java CampusPlacementEngine --gui
-.
-├── CampusPlacementEngine.java  # Core Application & Logic Engine
-├── PlacementEngineTest.java    # JUnit 5 Boundary Unit Tests
-├── statement.md                # System Scope & Target User Documentation
-└── README.md                   # Project Setup Guide
+This project provides a rule-based screening system that automatically evaluates student profiles against company requirements. It also provides interview round tracking, placement analytics, and automated offer letter generation.
+
+The application uses **Java 8 Stream API and Predicate chains** to implement the eligibility screening logic efficiently.
+
+---
+
+## Objectives
+
+The main objectives of this project are:
+
+1. To automate student eligibility screening during placement drives.
+2. To reduce manual effort for placement coordinators.
+3. To apply multiple eligibility conditions simultaneously.
+4. To track candidates through different interview rounds.
+5. To calculate basic placement analytics.
+6. To generate an offer letter for successfully placed candidates.
+7. To demonstrate practical implementation of Java programming concepts.
+
+---
+
+##  Key Features
+
+### 1. Student Management
+
+The system maintains student information including:
+
+- Student ID
+- Student Name
+- Department
+- CGPA
+- Number of backlogs
+- Technical skills
+- Placement status
+
+---
+
+### 2. Job Opening Management
+
+The application maintains company job opening information such as:
+
+- Job ID
+- Company name
+- Job role
+- Eligible department
+- Minimum CGPA
+- Maximum allowed backlogs
+- Required skill
+- CTC offered
+
+---
+
+### 3. Rule-Based Screening Engine
+
+The main feature of the project is the automated eligibility screening engine.
+
+Students are evaluated using multiple conditions:
+
+```text
+CGPA Requirement
+       +
+Backlog Requirement
+       +
+Department Requirement
+       +
+Required Skill
+       ↓
+Eligible / Not Eligible
