@@ -62,7 +62,7 @@ The application maintains company job opening information such as:
 
 ---
 
-### 3. Rule-Based Screening Engine
+### 3. Rule-Based Screening Engine  
 
 The main feature of the project is the automated eligibility screening engine.
 
@@ -78,3 +78,24 @@ Department Requirement
 Required Skill
        ↓
 Eligible / Not Eligible
+
+### 4. Multi-Round Interview Tracking
+
+The system tracks candidates through different interview stages:
+
+Aptitude Round
+      ↓
+Technical Round
+      ↓
+HR Round
+      ↓
+Selected / Rejected
+
+### 5. Placement Analytics
+
+The system can be used to calculate basic placement information such as:
+
+Number of students placed
+Placement percentage
+Department-wise placement information
+Average CTC
